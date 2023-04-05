@@ -336,7 +336,8 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2023.2.0a8/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.0a8/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2023.2.0a8/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/ControleJogador.cs"
+"Assets/Scripts/ControleCamera.cs"
+"Assets/Scripts/ControleJogador.cs"
 -langversion:9.0
 
 /deterministic
