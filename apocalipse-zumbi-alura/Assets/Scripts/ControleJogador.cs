@@ -6,18 +6,16 @@ public class ControlaJogador : MonoBehaviour
 {
 
     public float Velocidade = 10;
+    Vector3 direcao;
 
     void Update()
     {
-       //Inputs do Jogador - Guardando teclas apertadas
+        //Inputs do Jogador - Guardando teclas apertadas
+        float eixoX = Input.GetAxis("Horizontal");
+        float eixoZ = Input.GetAxis("Vertical");
 
-          float eixoX = Input.GetAxis("Horizontal");
-          float eixoZ = Input.GetAxis("Vertical");
+        direcao = new Vector3(eixoX, 0, eixoZ);
 
-          Vector3 direcao = new Vector3(eixoX, 0, eixoZ);
-
-          transform.Translate(direcao * Velocidade * Time.deltaTime);
-        
 
         //Animações do Jogador
         if (direcao != Vector3.zero)
@@ -30,4 +28,11 @@ public class ControlaJogador : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        //Movimentação do Jogador por segundo
+        GetComponent<Rigidbody>().MovePosition
+            (GetComponent<Rigidbody>().position +
+            (direcao * Velocidade * Time.deltaTime));
+    }
 }
